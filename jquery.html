@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        button,div {
+            background-color: grey;
+            color:white;
+            width: 400px;
+            text-align: center;
+        }
+        button {
+            
+            width: 440px;
+            padding:10px 20px;
+            border-radius: 20px 20px 0px 0px;
+        }
+        div {
+            padding: 20px;
+            border-radius: 0px 0px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <button>Click to show panel</button>
+    <input type="button" value="stop"/>
+    <div class="panel" style="position: absolute;">jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License. As of May 2019, jQuery is used by 73% of the 10 million most popular websites.</p>
+    <script>
+        /* 
+        // hide function
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("div").hide();
+                $("button").css("border-radius","20px 20px 20px 20px");
+            })
+        })
+        
+       // show function 
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("div").show();
+                $("button").css("border-radius","20px 20px 0px 0px");
+            })
+        })
+        
+
+        // hide/show toggle function 
+        var i=0;
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("div").toggle();
+                if(i%2==0) {
+                    $("button").css("border-radius","20px 20px 20px 20px");
+                    i++;
+                }
+                else {
+                    $("button").css("border-radius","20px 20px 0px 0px");
+                    i++;
+                }
+            })
+        });
+    
+
+         
+        // fadein function 
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("div").slideUp();
+                $("button").css({color:"red"});
+            })
+        })
+
+
+        
+        hide functions => hide(), show(), toggle()
+        fade functions => fadein(),fadeout(),fadeToggle()
+        slide function => slideup(), slidedown(), slidetoggle()
+        animate(),css()
+        setting/getting value => html(),text(),val()
+        
+        show function 
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("div").show();
+                $("button").css("border-radius","20px 20px 0px 0px");
+            })
+        })
+        */
+
+        /* hide/show toggle function 
+        var i=0;
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("div").toggle();
+                if(i%2==0) {
+                    $("button").css("border-radius","20px 20px 20px 20px");
+                    i++;
+                }
+                else {
+                    $("button").css("border-radius","20px 20px 0px 0px");
+                    i++;
+                }
+            })
+        });
+        */
+    
+       
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("div").animate({left:'+=550px'},5000);
+            });
+            $("input").click(function() {
+                alert("text inside input tag is "+$('input').val());
+            })
+        });
+
+    </script>
+</body>
+</html>

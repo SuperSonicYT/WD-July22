@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //single line comment
+
+        /* 
+        multiple 
+        line
+        comment
+        
+
+        var x = 10;  //integer
+        var y = "sfvsvvfsv324432";  //string
+        var z = true;  //boolean
+        var e="";  //empty or null
+        var u;  //undefined
+        var arr=[123,453,'dfsdv',true];
+
+        const c=30;
+
+        let r="ewrewr";
+
+        if(x>39) {
+            document.write("greater than 39");
+        }else {
+            document.write("lesser than 39");
+        }
+
+        x=45;
+        (x>39) ? document.write("greater than 39") : document.write("lesser than 39");
+
+
+        var student = {
+            id: 334343,
+            name: "akash",
+            marks: {
+                sem1: {
+                    sub1: 34,
+                    sub2:43
+                },
+                sem2: {
+                    sub1: 34,
+                    sub2:43
+                }
+            },
+            email: "akash@gmail.com"
+        }
+
+
+        document.write("Hello World")
+
+        var time=10;
+        if(time>5) {
+            document.write("Good morning");
+        }
+        else if(time>12) {
+            document.write("Good afternoon");
+        }
+        else if(time>16) {
+            document.write("Good evening");
+        }
+        else {
+            document.write("Good night");
+        }
+
+        var book = "Maths";
+        switch(book) {
+            case "Physics":
+                document.write("Price is 2443/-");
+                break;
+            case "Physics":
+                document.write("Price is 2443/-");
+                break;
+            case "Physics":
+                document.write("Price is 2443/-");
+                break;
+            default:
+                document.write("Book not availble");
+                break;
+        }
+
+        for(var fl=100;fl>0;fl-=2) {
+            document.write(fl+"<br>");
+        }
+
+        var wl=100;
+        while(wl>0) {
+            document.write(wl+"<br>");
+            wl-=2;
+        }
+
+        var dwl=100;
+        do {
+            dwl-=2;
+            if(dwl%10==0) {
+                continue;
+            }
+            document.write(dwl+"<br>");
+        }
+        while(dwl>0);
+
+        */
+
+        var student = {
+            id: 334343,
+            name: "akash",
+            marks: {
+                sem1: {
+                    sub1: 34,
+                    sub2:43
+                },
+                sem2: {
+                    sub1: 34,
+                    sub2:43
+                }
+            },
+            email: "akash@gmail.com"
+        }
+        for ( var value in student.marks.sem1) {
+                document.write("<br>"+value+" : "+student.marks.sem1[value]);
+        }
+
+        
+        function myfunc(a,b) {
+            return a+" "+b;
+        }
+
+        var myfunc = (a,b) => {
+            return a+" "+b;
+        } 
+        document.write(myfunc("Akash","Soni"));
+
+        function formvalidation() {
+            var email = document.getElementById('email').value;
+            var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if(email.match(mailformat))
+            {
+                return true;
+            }
+                alert("You have entered an invalid email address!");
+                return false;
+        }
+
+        function errorhandling() {
+            var num = document.getElementById('num').value;
+            try {
+                if(num<0) throw "less than zero";
+                if(isNaN(num)) throw "not a number";
+                if(num>10) throw "greater than 10";
+                if(num<0) throw "less than zero";
+                if(num=="" || num==undefined) throw "invalid input";
+            }
+            catch(err) {
+                alert("Input is "+err);
+            } 
+        }
+    </script>
+</head>
+<body>
+    <p id="para" onmouseover="document.getElementById('para').innerText='Mouse Over'" onmouseout="document.getElementById('para').innerText='Mouse Out'">Hello</p>
+    <button onclick="" ondblclick="" ondrag="" ondrop="">BUTTON</button>
+    <form onsubmit="errorhandling()">
+        <input id="email" type="text" name="email">
+        <input id="num" type="text" />
+        <button type="submit">SUBMIT</button>
+    </form>
+    <script src="external.js"></script>
+    <script>
+        /*
+        function loginclick() {
+            console.log("Login button has been clicked");
+        }
+        var x= document.getElementById("para");
+        x.innerHTML = "<b>Hello World</b>";
+        
+        window.alert("This is a warning");
+        var op = window.prompt("Youre trying to delete index.html write 'confirm' to proceed");
+        if(op=="" || op==null) {
+            alert("User cancelled the prompt");
+        }
+        else if(op==="confirm") {
+            alert("file deleted");
+        }
+        else {
+            alert("did not type confirm");
+        }
+        console.log("");
+        //window.print();
+        document.write("hello");
+        
+
+        var op=window.confirm("Are you sure?");
+        if(op==true) {
+            alert("File deleted");
+        }
+        else {
+            alert("File not deleted");
+        }
+        */
+    </script>
+</body>
+</html>
